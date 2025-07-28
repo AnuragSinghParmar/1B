@@ -1,0 +1,47 @@
+# Adobe Hackathon Round 1B Configuration
+# Persona-Driven Document Intelligence System
+
+# PDF Analysis Configuration
+font_size_threshold: 12
+min_section_length: 10
+max_pages_per_doc: 100
+max_docs: 10
+
+# Section Ranking Configuration
+tfidf_weight: 0.4
+keywords_weight: 0.3
+embedding_weight: 0.3
+max_tfidf_features: 500
+top_k_sections: 15
+
+# Sentence Transformer Model Configuration
+embedding_model: "all-MiniLM-L6-v2"  # Lightweight model ~80MB
+
+# Processing Constraints
+max_processing_time: 60  # seconds
+max_memory_usage: 1024   # MB
+
+# Output Configuration
+output_format: "json"
+include_score_breakdown: true
+include_confidence_scores: true
+
+# Logging Configuration
+log_level: "INFO"
+enable_performance_logging: true
+
+# Advanced Settings
+enable_content_preview: true
+preview_length: 500
+enable_subsection_extraction: true
+max_subsection_summary_length: 300
+
+# Heuristic Scoring Parameters
+font_size_boost_threshold: 14
+confidence_weight: 0.2
+early_page_boost: 0.1
+
+# Text Processing
+remove_excessive_whitespace: true
+normalize_unicode: true
+min_keyword_length: 3
